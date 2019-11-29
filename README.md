@@ -5,6 +5,7 @@ React Course
 sudo npm install -g create-react-app@1.5.2
 
 # init React App
+create-react-app --help
 create-react-app myapp
 
 # Serve the App
