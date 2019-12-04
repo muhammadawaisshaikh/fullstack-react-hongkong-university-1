@@ -1,15 +1,9 @@
 import React, {Component} from 'react';
 import {Card, CardImg, CardImgOverlay, CardTitle} from 'reactstrap';
 
-import DishDetail from './DishdetailComponent';
-
 class Menu extends Component {
     constructor(props) {
         super(props);
-
-        this.state = {
-            selectedDish: null
-        }
     }
 
     render() {
@@ -31,9 +25,6 @@ class Menu extends Component {
             <div className="container">
                 <div className="row">
                     {menu}
-                </div>
-                <div className="row">
-                    <DishDetail dish={this.state.selectedDish} comments={this.state.selectedDish}/>
                 </div>
             </div>
         );
