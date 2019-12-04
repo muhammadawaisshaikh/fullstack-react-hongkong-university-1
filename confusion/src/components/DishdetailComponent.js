@@ -38,20 +38,22 @@ class DishDetail extends Component {
                     <div key={comment.id}>
                         <div>
                             <p>{comment.comment}</p>
-                            <p>-- {comment.author}, {comment.date}</p>
+                            <p>-- {comment.author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</p>
                         </div>
                     </div>
                 );
             });
     
             return(
-                <div className="row">
-                    <div className="col-12 col-md-5 m-1">
-                        {this.renderDish(dish)}
-                    </div>
-                    <div className="col-12 col-md-5 m-1">
-                        <h3>Comments</h3>
-                        {comments}
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12 col-md-5 m-1">
+                            {this.renderDish(dish)}
+                        </div>
+                        <div className="col-12 col-md-5 m-1">
+                            <h3>Comments</h3>
+                            {comments}
+                        </div>
                     </div>
                 </div>
             );
